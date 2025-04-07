@@ -1,13 +1,17 @@
 import Hero from "./Components/Hero"
-
+import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
+import UserProfile from "./Components/UserProfile"
 
 function App() {
  
 
   return (
-    <div className="min-h-screen bg-gray-100">
-    <Hero />
-  </div>
+  <Router>
+    <Routes>
+      <Route path="/" element={<Hero/>}/>
+    <Route path="/user/:username" element={<UserProfile/>} />
+    </Routes>
+  </Router>
   )
 }
 

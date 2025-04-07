@@ -45,6 +45,12 @@ app.use("/api/github", githubRoutes);
 const watchRoute = require("./routes/watch");
 app.use("/api/watch", watchRoute);
 
+const bookmarkRoutes = require("./routes/bookmark");
+app.use("/api/bookmark", bookmarkRoutes);
+
+const githubAdmin = require("./routes/github.js");
+app.use("/api/github", githubAdmin);
+
 // Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
