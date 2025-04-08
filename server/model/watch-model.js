@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const watchSchema = new mongoose.Schema({
   userId: String,
@@ -11,4 +11,5 @@ const watchSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("WatchHistory", watchSchema);
+const WatchHistory = mongoose.model("WatchHistory", watchSchema);
+export default WatchHistory;

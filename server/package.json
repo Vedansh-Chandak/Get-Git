@@ -4,7 +4,7 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,8 @@
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "express-session": "^1.18.1",
+    "graphql": "^16.10.0",
+    "graphql-request": "^7.1.2",
     "mongoose": "^8.13.2",
     "passport": "^0.7.0",
     "passport-github2": "^0.1.12",

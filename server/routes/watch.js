@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express"
 const router = express.Router();
-const WatchHistory = require("../model/watch-model.js");
+import WatchHistory from "../model/watch-model.js";
 
 // Save watched repo
 router.post("/", async (req, res) => {
@@ -31,4 +31,4 @@ router.get('/:userId', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router

@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ContributionGraph from "./ContributionGraph";
+import { Tooltip } from 'react-tooltip';
+
 
 const UserProfile = () => {
   const { username } = useParams();
@@ -60,6 +62,7 @@ const UserProfile = () => {
         ))}
       </ul>
 <ContributionGraph username={username} />
+<Tooltip id="my-tooltip" place="top" content="Hello from tooltip!" />
 
     </div>
   );

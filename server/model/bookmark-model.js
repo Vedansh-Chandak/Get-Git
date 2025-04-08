@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const bookmarkSchema = new mongoose.Schema({
   userId: {
@@ -15,4 +15,5 @@ const bookmarkSchema = new mongoose.Schema({
   description: String,
 }, { timestamps: true });
 
-module.exports = mongoose.model("Bookmark", bookmarkSchema);
+const Bookmark = mongoose.model("Bookmark", bookmarkSchema);
+export default Bookmark

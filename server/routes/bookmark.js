@@ -1,6 +1,7 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const Bookmark = require("../model/bookmark-model.js");
+
+import Bookmark from "../model/bookmark-model.js";
 
 router.post("/", async (req, res) => {
   const { userId, repoId, repoName, htmlUrl, stars, description } = req.body;
@@ -49,4 +50,4 @@ router.delete("/:userId/:repoId", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

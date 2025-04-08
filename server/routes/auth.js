@@ -1,7 +1,9 @@
-const express = require("express");
-const passport = require('passport');
+import express from "express";
+import passport from "passport";
+import axios from "axios";
+
+
 const router = express.Router();
-const axios = require("axios");
 
 router.get('/github', passport.authenticate("github", {scope: ["user:email"],prompt: "consent"}));
 
@@ -43,4 +45,4 @@ router.get("/logout", (req, res)=>{
     })
 })
 
-module.exports = router;
+export default router

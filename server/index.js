@@ -1,12 +1,13 @@
-const express = require("express");
-const cors = require("cors");
-const session = require("express-session");
-const passport = require("passport");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
+import express from 'express';
+import cors from 'cors';
+import session from 'express-session';
+import passport from 'passport';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
 dotenv.config();
-require("./config/passport.js");
+
+import "./config/passport.js";
 
 const app = express();
 
@@ -36,19 +37,19 @@ mongoose.connect(process.env.MONGO_URL)
 
 //routes
 
-const authRoutes = require("./routes/auth");
+import authRoutes from "./routes/auth.js";
 app.use("/api/auth", authRoutes);
 
-const githubRoutes = require("./routes/auth");
+import githubRoutes from "./routes/auth.js";
 app.use("/api/github", githubRoutes);
 
-const watchRoute = require("./routes/watch");
+import watchRoute from "./routes/watch.js";
 app.use("/api/watch", watchRoute);
 
-const bookmarkRoutes = require("./routes/bookmark");
+import bookmarkRoutes from "./routes/bookmark.js";
 app.use("/api/bookmark", bookmarkRoutes);
 
-const githubAdmin = require("./routes/github.js");
+import githubAdmin from "./routes/github.js"
 app.use("/api/github", githubAdmin);
 
 // Server
